@@ -13,13 +13,9 @@ It is publicly available on [Hugging Face](https://huggingface.co/datasets/mirar
 
 # SERMetric
 
-SERMetric:
+SERMetric is an [open-source library](https://pypi.org/project/sermetric/) for evaluating how easy-to-read a text is. It supports a wide variety of indexes and allows the user to easily combine them.
 
-SERMetric is an open-source library for evaluating how easy-to-read a text is. It supports a wide variety of indexes and allows the user to easily combine them.
-
-FEATURES:
-
-Several indexes are provided:
+To evaluate readability, different types of indexes can be considered. Orthographic indexes measure writing aspects such as the number of puntuacion marks. Syllabic indexes focus on the syllabic structure of words. Lexical indexes analyse vocabulary-related properties, including lexical richness and the frequency of common or rare words. Syntactic indexes capture the complexity of grammatical structures. The Fernández-Huerta formula estimate the overall difficulty of a text. Finally, cosine similarity measures textual similarity between two texts.
 
 pointsIndex: it is the number of points in the text divided by the number of words.
 
