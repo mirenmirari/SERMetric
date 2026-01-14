@@ -1,4 +1,10 @@
-#  SERMetric
+# PISNER
+
+PISNER (Plena inclusión Spanish News Easy-to-Read) is a parallel dataset for E2R text adaptation in Spanish.
+This dataset is based on news articles published on the [Plena inclusión](https://www.plenainclusion.org/noticias/) and [Plena inclusión La Rioja](https://www.plenainclusionlarioja.org/actualidad/noticias) websites until February 4, 2025.
+Both websites publish news item in two versions: a standard text and its corresponding Easy-to-Read (E2R) adaptation, produced and validated by experts in the field.
+
+# SERMetric
 
 SERMetric:
 
