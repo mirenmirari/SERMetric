@@ -1,5 +1,5 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme
-title: PISNER & SERMetric
+title: PISNER and SERMetric
 description: PISNER is a parallel dataset for Easy-to-Read (E2R) text adaptation in Spanish. SERMetric is an open-source library for evaluating how E2R a text is. This library supports a wide variety of indexes and allows the user to easily combine them.
