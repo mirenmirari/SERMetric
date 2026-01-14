@@ -2,7 +2,14 @@
 
 PISNER (Plena inclusión Spanish News Easy-to-Read) is a parallel dataset for E2R text adaptation in Spanish.
 This dataset is based on news articles published on the [Plena inclusión](https://www.plenainclusion.org/noticias/) and [Plena inclusión La Rioja](https://www.plenainclusionlarioja.org/actualidad/noticias) websites until February 4, 2025.
-Both websites publish news item in two versions: a standard text and its corresponding Easy-to-Read (E2R) adaptation, produced and validated by experts in the field.
+Both websites publish news item in two versions: a standard text and its corresponding E2R adaptation, produced and validated by experts in the field.
+The dataset contains 1,180 valid text pairs. Table 1 presents descriptive statistics of the dataset.
+It is publicly available on [Hugging Face](https://huggingface.co/datasets/mirari/PISNER) and it is divided into two parts: 80% for training and 20% for testing, corresponding to 944 and 236 news items, respectively.
+
+|  | Sentences | Words   | Average words/sentences | Special character | Average syllables|
+| --- | :----: |:---:|:---:|:---:|:---:|
+|Standard text | 21,007 | 545,996 | 29.03 | 69.278 | 2.15 |
+| Easy-to-Read text | 11,497 | 160,972 | 16.15 | 19.449 | 2.11 |
 
 # SERMetric
 
