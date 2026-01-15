@@ -15,28 +15,28 @@ It is publicly available on [Hugging Face](https://huggingface.co/datasets/mirar
 
 SERMetric is an [open-source library](https://pypi.org/project/sermetric/) for evaluating how easy-to-read a text is. It supports a wide variety of indexes and allows the user to easily combine them.
 
-To evaluate readability, different types of indexes can be considered. Orthographic indexes measure writing aspects such as the number of puntuacion marks. Syllabic indexes focus on the syllabic structure of words. Lexical indexes analyse vocabulary-related properties, including lexical richness and the frequency of common or rare words. Syntactic indexes capture the complexity of grammatical structures. The Fernández-Huerta formula estimate the overall difficulty of a text. Finally, cosine similarity measures textual similarity between two texts. Here, there is the name of each function as well as its description:
+To evaluate readability, different types of indexes can be considered. Orthographic indexes measure writing aspects such as the number of puntuacion marks. Syllabic indexes focus on the syllabic structure of words. Lexical indexes analyse vocabulary-related properties, including lexical richness and the frequency of common or rare words. Syntactic indexes capture the complexity of grammatical structures. Moreover, the Fernández-Huerta formula estimate the overall difficulty of a text. Here, there is the name of each function as well as its description:
 
-* pointsIndex: it is the number of points in the text divided by the number of words.
+* pointsIndex: It is the number of point in the text divided by the number of words. The closer to one, the more readable, as shorter sentences are involved.
 
-* newParagraphIndex: it is the number of new paragraphs in the text divided by the number of words.
+* newParagraphIndex: It is the number of paragraphs in the text divided by the number of words. The closer the number of paragraphs to the point index, the more readable it is, as it involves shorter paragraphs.
 
-* CommaIndex: the number of commas in the text divided by the number of words.
+* CommaIndex: It is the number of commas in the text divided by the number of words. The closer to zero, the more readable.
 
-* extensionIndex: ratio between the number of syllables in lexical words and the number of lexical words, lexical words being understood as nouns, verbs, adjectives and adverbs.
+* extensionIndex: It is the ratio between the number of syllables of lexical words and the number of lexical words, lexical words being understood as nouns, verbs, adjectives, and adverbs. As it is an average, it implies that results between one and two mean a predominance of words between one and two syllables, so it will be more readable.
 
-* triPoliIndex: ratio of the number of trisyllabic and polysyllabic words to the number of lexical words.
+* triPoliIndex: It is the ratio between the number of trisyllabic and polysyllabic words and the number of lexical words. The closer to zero, the more readable.
 
-* lexicTriPoliIndex: ratio of the number of trisyllabic and polysyllabic lexical words to the numberof lexical words.
+* lexicTriPoliIndex: It is the ratio between the number of trisyllabic and polysyllabic lexical words and the number of lexical words. The closer to zero, the more readable. 
 
-* diversityIndex: ratio between the number of different words in the text and the total number of words.
+* diversityIndex: It is the ratio between the number of different words in the text and the total number of words. A number close to zero implies excessive redundancy of the same terms, which makes the text tedious; while a number close to one means high diversity, which makes it less readable.
 
-* lexicalFreqIndex: ratio between the number of low-frequency lexical words and the number of lexical words. The “Corpus de la Real Academia Española” (CREA) and the ‘Gran diccionario del uso del español actual’ will be used as a reference.
+* lexicalFreqIndex: It is the ratio between the number of low-frequency lexical words and the number of lexical words (references: The "Corpus de la Real Academia Española" (CREA) and the "Gran diccionario del uso del español actual"). The closer to zero, the more readable.
 
-* wordForPhraseIndex: quotient resulting from the division between the number of words in the text and the number of sentences.
+* wordForPhraseIndex: It is the quotient resulting from the division between the number of words in the text and the number of sentences. For a text to be easy to read, the length of the sentences must be between 15 and 20 words maximum.
 
-* sentenceComplexityIndex: the result of dividing the number of sentences by the number of propositions.
+* sentenceComplexityIndex: It is the result of dividing the number of sentences by the number of propositions. The minimum value is one, and the maximum is infinite, although above five it is difficult to maintain coherence and clarity of expression.
 
-* complexityIndex: quotient between the number of low-frequency syllables and the total number of syllables (reference: ‘Diccionario de frecuencias de las unidades lingüísticas del castellano’)
+* complexityIndex: It is the quotient between the number of low frequency syllables and the total number of syllables (reference: "Diccionario de frecuencias de las unidades lingüísticas del castellano"). The closer to zero, the more readable.
 
-* fernandezHuerta: is the result of 206.84-0.6P-1.02F, where P is the number of syllables per 100 words and F is the number of sentences per 100 words.
+* fernandezHuerta: It is the result of 206.84-0.6P-1.02F, where P represents the average number of syllables per 100 words and F represents the average number of sentences per 100 words. Higher scores indicate greater readability, whereas lower scores correspond to more complex texts.
