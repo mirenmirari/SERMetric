@@ -59,11 +59,3 @@ The pipeline is composed of three sequential stages:
 3. **Correction.** A third LLM receives both the generated adaptation and the evaluation report, producing a revised version that aims to improve readability while preserving the original meaning.
 
 The pipeline is model-agnostic and can be executed with any LLM supported by Ollama. In our experiments we evaluated Aya-Expanse, Gemma, Llama, Phi and Salamandra, although additional models can be easily incorporated.
-
-The repository includes:
-
-- Prompt templates for all stages.
-- Automatic evaluation using SERMetric.
-- Generation of evaluation reports.
-- Reflection-based correction.
-- Scripts for reproducing the experiments reported in the paper.
