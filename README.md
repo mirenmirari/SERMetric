@@ -40,3 +40,30 @@ To evaluate readability, different types of indexes can be considered. Orthograp
 * complexityIndex: It is the quotient between the number of low frequency syllables and the total number of syllables (reference: "Diccionario de frecuencias de las unidades lingüísticas del castellano"). The closer to zero, the more readable.
 
 * fernandezHuerta: It is the result of 206.84-0.6P-1.02F, where P represents the average number of syllables per 100 words and F represents the average number of sentences per 100 words. Higher scores indicate greater readability, whereas lower scores correspond to more complex texts.
+
+# Pipeline
+
+This repository also includes the complete implementation of the reflection-based pipeline proposed in our paper for adapting Spanish texts into Easy-to-Read (E2R).
+
+The pipeline is composed of three sequential stages:
+
+1. **Generation.** An LLM receives a standard Spanish text together with a set of E2R guidelines and generates an initial adaptation. Different prompting strategies are supported, including zero-shot and few-shot settings, using either the mandatory guidelines or the complete set of mandatory and recommended guidelines.
+
+2. **Evaluation.** A second LLM analyses the generated adaptation and produces a structured evaluation report. Five evaluation strategies are implemented:
+   - Metrics only.
+   - Mandatory guidelines.
+   - All guidelines.
+   - Metrics + mandatory guidelines.
+   - Metrics + all guidelines.
+
+3. **Correction.** A third LLM receives both the generated adaptation and the evaluation report, producing a revised version that aims to improve readability while preserving the original meaning.
+
+The pipeline is model-agnostic and can be executed with any LLM supported by Ollama. In our experiments we evaluated Aya-Expanse, Gemma, Llama, Phi and Salamandra, although additional models can be easily incorporated.
+
+The repository includes:
+
+- Prompt templates for all stages.
+- Automatic evaluation using SERMetric.
+- Generation of evaluation reports.
+- Reflection-based correction.
+- Scripts for reproducing the experiments reported in the paper.
